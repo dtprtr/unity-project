@@ -12,6 +12,7 @@ public class PlayerMovment : MonoBehaviour
     public float castDistance;
     public LayerMask groundLayer;
     public GameObject playerObj;
+    public LayerMask DragBox;
     
     // grabs inital position
     private Vector2 InitialPos;
@@ -85,5 +86,7 @@ public class PlayerMovment : MonoBehaviour
         transform.position = InitialPos;
         transform.rotation = InitialRot;
     }
+
+
 }
     
