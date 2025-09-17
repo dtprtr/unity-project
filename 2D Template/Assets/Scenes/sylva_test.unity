@@ -714,7 +714,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1192858248
+--- !u!1 &783335730
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -722,27 +722,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1192858254}
-  - component: {fileID: 1192858253}
-  - component: {fileID: 1192858252}
-  - component: {fileID: 1192858251}
-  - component: {fileID: 1192858250}
-  - component: {fileID: 1192858249}
-  - component: {fileID: 1192858255}
+  - component: {fileID: 783335736}
+  - component: {fileID: 783335735}
+  - component: {fileID: 783335734}
+  - component: {fileID: 783335733}
+  - component: {fileID: 783335732}
+  - component: {fileID: 783335731}
+  - component: {fileID: 783335737}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Capsule (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!70 &1192858249
+--- !u!70 &783335731
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192858248}
+  m_GameObject: {fileID: 783335730}
   m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
@@ -773,13 +773,13 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
---- !u!114 &1192858250
+--- !u!114 &783335732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192858248}
+  m_GameObject: {fileID: 783335730}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192858251}
+      - m_Target: {fileID: 783335733}
         m_TargetAssemblyTypeName: PlayerMovment, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -832,7 +832,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Crouch[/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast,/Keyboard/c]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192858251}
+      - m_Target: {fileID: 783335733}
         m_TargetAssemblyTypeName: PlayerMovment, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -903,34 +903,37 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1192858251
+--- !u!114 &783335733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192858248}
+  m_GameObject: {fileID: 783335730}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7797f70fe8b5d3f4eb24eab66d110f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  JumpHeight: 25
-  boxsize: {x: 2.5, y: 0.21}
-  castDistance: 0.8
+  JumpHeight: 26
+  boxsize: {x: 2.5, y: 0.3}
+  castDistance: 1.02
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   playerObj: {fileID: 0}
---- !u!50 &1192858252
+  DragBox:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!50 &783335734
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192858248}
+  m_GameObject: {fileID: 783335730}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -950,13 +953,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!212 &1192858253
+--- !u!212 &783335735
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192858248}
+  m_GameObject: {fileID: 783335730}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -1005,32 +1008,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1192858254
+--- !u!4 &783335736
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192858248}
+  m_GameObject: {fileID: 783335730}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -0.16, z: 0}
-  m_LocalScale: {x: 0.527425, y: 0.527425, z: 0.527425}
+  m_LocalPosition: {x: 2.0332, y: 0.0042, z: 0}
+  m_LocalScale: {x: 0.6628, y: 0.6628, z: 0.6628}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1192858255
+--- !u!61 &783335737
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192858248}
+  m_GameObject: {fileID: 783335730}
   m_Enabled: 1
   serializedVersion: 3
-  m_Density: 1.5
-  m_Material: {fileID: 0}
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: aea6b00b9fd23694eb8c3007478c90fc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1234,7 +1237,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 567152524}
   - {fileID: 247442762}
-  - {fileID: 1192858254}
   - {fileID: 178132697}
   - {fileID: 1492537156}
   - {fileID: 688163448}
+  - {fileID: 783335736}
