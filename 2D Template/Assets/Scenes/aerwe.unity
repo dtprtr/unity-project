@@ -347,7 +347,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   m_Size: {x: 9, y: 9}
   m_EdgeRadius: 0
 --- !u!50 &1456615728
@@ -362,7 +362,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 14.60613
+  m_Mass: 3.1514223
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -441,8 +441,8 @@ Transform:
   m_GameObject: {fileID: 1456615726}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.39, y: 2.29, z: 0}
-  m_LocalScale: {x: 0.42464408, y: 0.42464408, z: 0.42464408}
+  m_LocalPosition: {x: 5.8, y: 1.49, z: 0}
+  m_LocalScale: {x: 0.19724718, y: 0.19724718, z: 0.19724718}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -472,7 +472,7 @@ Transform:
   m_GameObject: {fileID: 1928910380}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.21, y: 0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -672,7 +672,7 @@ MonoBehaviour:
   castDistance: 1.02
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   playerObj: {fileID: 0}
 --- !u!50 &2069999496
 Rigidbody2D:
@@ -942,6 +942,12 @@ MonoBehaviour:
   m_frequncy: 5
   m_DrawDragLine: 1
   m_color: {r: 0, g: 1, b: 1, a: 1}
+  castDistance: 0
+  checkBox:
+    serializedVersion: 2
+    m_Bits: 128
+  boxSize: {x: 2.02, y: 2.53}
+  PlayerObj: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -5,12 +5,19 @@ using UnityEngine.UIElements;
 public class PlayerMovment : MonoBehaviour
 {
     public float speed;
+
     public float JumpHeight;
+
     private Rigidbody2D Rb;
+
     private float _movement;
+
     public Vector2 boxsize;
+
     public float castDistance;
+
     public LayerMask groundLayer;
+
     public GameObject playerObj;
     
     
@@ -34,6 +41,7 @@ public class PlayerMovment : MonoBehaviour
         {
             Reset();
         }
+
 
         Rb.linearVelocityX = _movement;
     }
@@ -72,6 +80,8 @@ public class PlayerMovment : MonoBehaviour
         }
     }
 
+    
+
     // Draw the boxcast in unity
     private void OnDrawGizmos()
     {
@@ -86,7 +96,5 @@ public class PlayerMovment : MonoBehaviour
         transform.position = InitialPos;
         transform.rotation = InitialRot;
     }
-
-
 }
     
