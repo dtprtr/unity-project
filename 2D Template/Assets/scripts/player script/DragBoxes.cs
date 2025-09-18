@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class DragBoxes : MonoBehaviour 
@@ -17,11 +18,27 @@ public class DragBoxes : MonoBehaviour
 
     private TargetJoint2D m_targtjoint;
 
+    public float castDistance;
+
+    public LayerMask checkBox;
+
+    public Vector2 boxSize;
+
+    public GameObject PlayerObj;
+
+
+
     
 
     // Update is called once per frame
     void Update()
     {
+        if (PlayerObj)
+        {
+
+        }
+
+
         var worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(0))
@@ -60,5 +77,25 @@ public class DragBoxes : MonoBehaviour
             if (m_DrawDragLine)
                 Debug.DrawLine(m_targtjoint.transform.TransformPoint(m_targtjoint.anchor), worldPos, m_color);       
         }
+        
+    }
+    public bool conPlayer()
+    {
+        if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, checkBox))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(transform.position + Vector3.down * castDistance, boxSize);
     }
 }
