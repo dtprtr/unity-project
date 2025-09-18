@@ -58,11 +58,7 @@ public class DragBoxes : MonoBehaviour
             m_targtjoint.target = worldPos;
 
             if (m_DrawDragLine)
-            Debug.DrawLine (m_tar)
-
-            
+                Debug.DrawLine(m_targtjoint.transform.TransformPoint(m_targtjoint.anchor), worldPos, m_color);       
         }
     }
-
-    
 }

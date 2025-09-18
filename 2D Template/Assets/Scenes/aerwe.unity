@@ -278,12 +278,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778137006}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.06, y: -3.55, z: 0}
   m_LocalScale: {x: 3.6952424, y: 1.2981, z: 1.2981}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1928910381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1456615726
 GameObject:
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 1456615729}
   - component: {fileID: 1456615728}
   - component: {fileID: 1456615727}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: box1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456615726}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.39, y: 2.29, z: 0}
   m_LocalScale: {x: 0.42464408, y: 0.42464408, z: 0.42464408}
   m_ConstrainProportionsScale: 0
@@ -475,7 +475,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 778137009}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1934013593
@@ -934,11 +935,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7230132c6da6a4996900d3e403c1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DragLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_Damping: 1
+  m_frequncy: 5
+  m_DrawDragLine: 1
+  m_color: {r: 0, g: 1, b: 1, a: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 324526190}
   - {fileID: 1928910381}
-  - {fileID: 778137009}
   - {fileID: 1456615730}
