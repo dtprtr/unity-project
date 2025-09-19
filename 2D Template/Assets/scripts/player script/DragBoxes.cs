@@ -62,7 +62,7 @@ public class DragBoxes : MonoBehaviour
 
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider, true);
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && m_targtjoint)
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), m_targtjoint.GetComponent<Collider2D>(), false);
 
