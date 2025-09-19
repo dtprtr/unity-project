@@ -24,7 +24,7 @@ public class DragBoxes : MonoBehaviour
 
     public Vector2 boxSize;
 
-    public GameObject PlayerObj;
+  
 
 
 
@@ -33,10 +33,9 @@ public class DragBoxes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerObj)
-        {
+        
+        
 
-        }
 
 
         var worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -61,10 +60,12 @@ public class DragBoxes : MonoBehaviour
 
             m_targtjoint.anchor = m_targtjoint.transform.InverseTransformPoint(worldPos);
 
-
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider, true);
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), m_targtjoint.GetComponent<Collider2D>(), false);
+
             Destroy(m_targtjoint);
             m_targtjoint = null;
             return;
