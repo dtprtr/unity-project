@@ -27,12 +27,15 @@ public class PlayerMovment : MonoBehaviour
 
     // grabs initial rotation
     private Quaternion InitialRot;
+
+    private DragBoxes drag;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         Rb = GetComponent<Rigidbody2D>();
+        drag = GetComponent<DragBoxes>();
     }
 
     // Update is called once per frame
@@ -71,12 +74,16 @@ public class PlayerMovment : MonoBehaviour
     // Check if the player is grounded using a boxcast
     public bool IsGrounded()
     {
-        if (Physics2D.BoxCast(transform.position, boxsize, 0, -transform.up, castDistance, groundLayer))
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxsize, 0, -transform.up, castDistance, groundLayer);
+
+        if (!hit.collider.CompareTag("box")||hit.collider.gameObject!= drag.m_targtjoint.gameObject)
         {
+            Debug.Log("Grounded");
             return true;
         }
         else
         {
+            Debug.Log("Not Grounded");
             return false;
         }
     }

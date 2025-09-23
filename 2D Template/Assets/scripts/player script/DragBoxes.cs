@@ -16,7 +16,7 @@ public class DragBoxes : MonoBehaviour
     public bool m_DrawDragLine = true;
     public Color m_color = Color.cyan;
 
-    private TargetJoint2D m_targtjoint;
+    [HideInInspector]public TargetJoint2D m_targtjoint;
 
     public float castDistance;
 
